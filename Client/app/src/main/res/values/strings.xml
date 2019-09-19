@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SOSButton</string>
+    <string name="fio_txt">ФИО</string>
+    <string name="birthday_txt">Дата рождения</string>
+    <string name="passport_txt">Серия и номер паспорта</string>
+    <string name="medical_data_txt">Примечания по здоровью</string>
+    <string name="save_data_btn_txt">Сохранить</string>
+    <string name="profile_btn_txt">Профиль</string>
+    <string name="save_toast_text">Сохранено</string>
+
+</resources>
