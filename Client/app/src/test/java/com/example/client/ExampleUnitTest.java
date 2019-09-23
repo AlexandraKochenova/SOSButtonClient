@@ -1,4 +1,4 @@
-package com.example.sosbutton;
+package com.example.client;
 
 import org.junit.Test;
 

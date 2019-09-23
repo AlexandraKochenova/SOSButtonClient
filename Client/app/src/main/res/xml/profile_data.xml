@@ -1,7 +1,7 @@
-<profile_data>
-    <id>-1</id>
-    <name></name>
-    <passport></passport>
-    <birthday></birthday>
-    <medical_data></medical_data>
-</profile_data>
+<profile_data
+    id = "-1"
+    fio = "Коченова Александра Сергеевна"
+    passport = "2417 864640"
+    birthday = "09.06.1997"
+    medical_data = "Аллергии нет, аппединцит вырезан"
+/>

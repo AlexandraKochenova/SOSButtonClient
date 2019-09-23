@@ -1,4 +1,4 @@
-package com.example.sosbutton;
+package com.example.client;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.sosbutton", appContext.getPackageName());
+        assertEquals("com.example.client", appContext.getPackageName());
     }
 }
