@@ -10,4 +10,6 @@ public interface ServerApi {
 
     @GET("/{username}")
     public Call<Post> getPostWithID(@Path("username") String username);
+
+
 }

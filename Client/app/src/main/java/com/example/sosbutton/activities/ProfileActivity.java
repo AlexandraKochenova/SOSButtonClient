@@ -2,7 +2,6 @@ package com.example.sosbutton.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -20,7 +19,6 @@ import org.xmlpull.v1.XmlPullParser;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class ProfileActivity extends Activity {
 
@@ -70,20 +68,23 @@ public class ProfileActivity extends Activity {
 
         //сохранить в бд, отправить на сервер
 
+
+
         NetworkService.getInstance()
                 .getJSONApi()
-                .getPostWithID("Alexandra")
+                .getPostWithID(_person.get_name())
                 .enqueue(new Callback<Post>() {
                     @Override
                     public void onResponse(Call<Post> call, Response<Post> response) {
                         Post post = response.body();
-                        _fioTxt.append(post.getUserId()+" ");
-                        _fioTxt.append(post.getUsername());
+
+                        _person.set_id(post.getUserId());
+                        _fioInputTxt.setText(post.getUsername());
                     }
 
                     @Override
                     public void onFailure(Call<Post> call, Throwable throwable) {
-                        _fioTxt.append("Error");
+                        _fioTxt.append(throwable.toString());
                         throwable.printStackTrace();
                     }
                 });

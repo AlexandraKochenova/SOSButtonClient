@@ -20,11 +20,13 @@ def index(username):
     print(username + " GET");
     global id
     id+=1
-    response = {"id": id, "username": username}
-    response_json = json.loads(response)
-    return response_json
+    response = {"id" : str(id), "username" : username}
+    response = json.dumps(response)
+    #response_json = json.loads(response)
+    return response
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=3149)
+    app.run(host="192.168.43.185", port=3149)
+    #app.run(host="127.0.0.1", port=3149)
 

@@ -7,16 +7,16 @@ public class Post {
 
     @SerializedName("id")
     @Expose
-    private int userId;
+    private String userId;
     @SerializedName("username")
     @Expose
     private String username;
 
-    public int getUserId(){
+    public String getUserId(){
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
